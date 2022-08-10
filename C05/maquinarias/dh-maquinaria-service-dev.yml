@@ -1,4 +1,0 @@
-server:
-  port: ${PORT:8888}
-
-message: A ver si funca el maquinaria-service!
