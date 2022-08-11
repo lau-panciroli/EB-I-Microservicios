@@ -1,0 +1,7 @@
+server:
+  port: ${PORT:8885}
+
+message: Servicio de caja - Ambiente productivo
+
+denominaciones_billete:10,20,50,100,200,500,1000
+cantidad_maxima_efectivo:5000000
