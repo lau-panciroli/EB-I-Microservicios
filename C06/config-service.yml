@@ -1,0 +1,12 @@
+##Para que esta aplicación se registre en Eureka:
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka_client_url}
+      
+##Configuraciones para Spring Actuator:
+info:
+  app:
+    name: config-service
+    description: Config Server by LVP.
+    version: 1.0.0
