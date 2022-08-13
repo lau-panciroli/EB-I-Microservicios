@@ -7,15 +7,6 @@ eureka:
       defaultZone: ${eureka_client_url}
       
 ##Configuraciones para Spring Actuator:
-management:
-  info:
-    env:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include: health, info
-
 info:
   app:
     name: image-service
