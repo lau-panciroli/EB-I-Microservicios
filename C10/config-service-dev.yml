@@ -3,10 +3,3 @@ eureka:
   client:
     service-url:
       defaultZone: ${eureka_client_url}
-
-##Info para Spring Actuator:
-info:
-  app:
-    name: config-service
-    description: Configuration Service created for development environment.
-    version: 1.0.0
