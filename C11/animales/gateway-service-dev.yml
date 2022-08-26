@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+##Para que este servicio se registre en Eureka:
+spring:
+  eureka:
+    client:
+      service-url:
+        defaultZone: ${eureka_client_url}
+  cloud:
+    gateway:
+      routes:
+        - id: animalRoute #Identificando la ruta del service de animales
+          uri: lb://animal-service #URL donde se hará el redirect según el predicate definido
+          predicates: #Reglas de análisis de una request
+            - Path=/animals/**
+        - id: specieRoute #Identificando la ruta del service de especies de animales
+          uri: lb://specie-service #URL donde se hará el redirect según el predicate definido
+          predicates: #Reglas de análisis de una request
+            - Path=/species/**
