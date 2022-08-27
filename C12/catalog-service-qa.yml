@@ -1,0 +1,16 @@
+server:
+  port: 8085
+
+##Para que este servicio se registre en Eureka:
+spring:
+  eureka:
+    client:
+      service-url:
+        defaultZone: ${eureka_client_url}
+
+##Info para Spring Actuator:
+info:
+  app:
+    name: catalog-service
+    description: Catalog Service created for QA environment.
+    version: 1.0.0
