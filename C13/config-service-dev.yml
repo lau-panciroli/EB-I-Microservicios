@@ -1,0 +1,5 @@
+##Para que este servicio se registre en Eureka:
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka_client_url}

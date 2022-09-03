@@ -1,0 +1,11 @@
+eureka_client_url: http://localhost:8761/eureka/
+
+##Configuraciones para Spring Actuator:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, gateway
+  info:
+    env:
+      enabled: true
