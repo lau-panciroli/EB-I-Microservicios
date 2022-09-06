@@ -27,3 +27,5 @@ spring:
           filters:
             - AddRequestHeader=movie-request-header, custom-movie-request-header
             - AddResponseHeader=movie-response-header, custom-movie-response-header
+            - AddRequestHeader=serie-request-header, custom-serie-request-header
+            - AddResponseHeader=serie-response-header, custom-serie-response-header
