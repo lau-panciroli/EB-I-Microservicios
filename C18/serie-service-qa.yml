@@ -1,0 +1,9 @@
+server:
+  port: 8087
+
+##Info para Spring Actuator:
+info:
+  app:
+    name: serie-service
+    description: Serie Service created for QA environment.
+    version: 1.0.0

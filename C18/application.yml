@@ -1,0 +1,15 @@
+##Configuraciones para Spring Actuator:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+
+##Configuraciones para Zipkin:
+spring:
+  zipkin:
+    base-url: http://zipkin:9411/
+    enabled: true

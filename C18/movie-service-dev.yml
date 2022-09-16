@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+##Info para Spring Actuator:
+info:
+  app:
+    name: movie-service
+    description: Movie Service created for development environment.
+    version: 1.0.0

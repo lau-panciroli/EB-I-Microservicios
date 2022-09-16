@@ -1,0 +1,9 @@
+server:
+  port: 8085
+
+##Info para Spring Actuator:
+info:
+  app:
+    name: catalog-service
+    description: Catalog Service created for QA environment.
+    version: 1.0.0

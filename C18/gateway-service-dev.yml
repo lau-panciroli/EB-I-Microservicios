@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      default-filters: #Filtro por defecto de todas las requests realizadas al gateway
+        - name: LogFilter
+      routes:
+        - id: movieRoute #Identificando la ruta del service de películas
+          uri: lb://movie-service #URL donde se hará el redirect según el predicate definido
+          predicates: #Reglas de análisis de la request
+            - Path=/movies/**
+        - id: serieRoute #Identificando la ruta del service de series
+          uri: lb://serie-service #URL donde se hará el redirect según el predicate definido
+          predicates: #Reglas de análisis de la request
+            - Path=/series/**
+        - id: catalogRoute #Identificando la ruta del service de catálogo de películas
+          uri: lb://catalog-service #URL donde se hará el redirect según el predicate definido
+          predicates: #Reglas de análisis de la request
+            - Path=/catalogs/**
+          filters:
+            - AddRequestHeader=movie-request-header, custom-movie-request-header
+            - AddResponseHeader=movie-response-header, custom-movie-response-header
+            - AddRequestHeader=serie-request-header, custom-serie-request-header
+            - AddResponseHeader=serie-response-header, custom-serie-response-header
